@@ -23,10 +23,12 @@ nav {
   transition-duration: 1s;
 }
 
+/* Direct/general sibling (~) of nav*/
 .hamburger:hover ~ nav {
   opacity: 1;
 }
 
+/* 
 @keyframes top {
   from {
     transform: rotate(0deg) translate(0%); 
@@ -47,9 +49,62 @@ nav {
 
 @keyframes bottom {
   from {
-    transform: rotate(0deg) translate(05);
+    transform: rotate(0deg) translate(0%);
   }
   to {
     transform: rotate(-45deg) translate(67%);
   }
+} */
+
+/* Class solution */
+@keyframes top {
+  from {
+    transform: rotate(0); 
+  }
+  to {
+    transform: translateY(33px) rotate(45deg); 
+  }
 }
+
+@keyframes middle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bottom {
+  from {
+    transform: rotate(0); 
+  }
+  to {
+    transform: translateY(-33px) rotate(-45deg); 
+  }
+}
+
+/* Student solution that might be helpful in the future
+
+.hamburger div {
+  background-color: rebeccapurple;
+  height: 10px;
+  width: 70%;
+  margin: auto;
+  transition-duration: 1.0s;
+}
+
+.hamburger:hover #top {
+  transform-origin: -0.4em 1.2em ;
+  transform: rotateZ(45deg);
+}
+
+.hamburger:hover #bottom {
+  transform-origin: -.5em -0.5em ;
+  transform: rotateZ(-45deg);
+}
+
+.hamburger:hover #middle {
+  visibility: hidden;
+  transition-duration: 0.1s;
+} */
