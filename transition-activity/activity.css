@@ -1,3 +1,4 @@
+/*
 button {
     background-color: ghostwhite;
     color: black;
@@ -8,3 +9,14 @@ button:hover {
     background-color: cornflowerblue;
     color: ghostwhite;
 }
+*/
+
+/*Class solution*/
+.transform {
+    transition-duration: 1s;
+  }
+  
+  .transform:hover {
+    background-color: cornflowerblue;
+    color: ghostwhite;
+  }
